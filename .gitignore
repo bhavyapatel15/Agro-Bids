@@ -1,0 +1,28 @@
+
+# Ignore system files and folders
+/system/
+
+# Ignore application config and sensitive information
+/application/config/
+
+# Ignore application logs and cache
+/application/logs/
+/application/cache/
+
+# Ignore user uploads and temporary files
+/application/uploads/
+
+# Ignore the user guide (not relevant for production)
+/user_guide/
+
+# Ignore environment-specific files (e.g., database config)
+/application/config/database.php
+/application/config/config.php
+
+# Ignore IDE-specific files (e.g., VS Code, Sublime, etc.)
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

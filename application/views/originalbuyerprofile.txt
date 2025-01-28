@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Mirrored from askbootstrap.com/preview/grofarweb/fresh_vegan.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jan 2024 07:38:56 GMT -->
+   <head>
+     <?php include_once("topuser.php")?>
+   </head>
+   <style>
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    
+}
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+   </style>
+   <body>
+    
+      <div class="bg-white shadow-sm osahan-main-nav">
+
+      <?php include_once("navuser.php")?>
+      
+      <section class="py-4 osahan-main-body">
+               <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <table id="example" class="fl-table" >
+                      
+                                           <thead>
+                                                 <tr>
+                                                   <th>Buyer Id</th>
+                                                   <th>Buyer Name</th>
+                                                   <th>Profile Photo</th>
+                                                   <th>City</th>
+                                                   <th>Operations</th>                                                                                                
+                                                 </tr>                                                
+                                             </thead>
+                                             <tbody>
+                                                      <?php
+                                                           foreach($buyerInfo as $b)
+                                                            {                                                 
+                                                             
+                                                      ?>
+                                                       <tr>
+                                                         <td><?=$b->buyerid?></td>
+                                                         <td><?=$b->buyername?></td>
+
+                                                         <td>
+                                                            <img height="100px" width="100px" src="<?=base_url('resources/user/assets/img/'.$b->profilephoto)?>">
+                                                         </td>
+
+                                                         <td><?=$b->cityname?></td>
+                                                         <td><a style="color:green" href="<?=site_url('buyermoreinfo/index/'.$b->buyerid)?>">View More Info</a></td>
+    
+                                                       </tr>
+                                                        <?php
+                                                              }
+                                                        ?>
+
+                                             </tbody>
+                 
+                       </table>
+                </div>
+              </div>
+            </div>
+      </section>
+      <nav id="main-nav">
+         <ul class="second-nav">
+            <li><a href="home.html"><i class="icofont-smart-phone mr-2"></i> Home</a></li>
+            <li>
+               <a href="#"><i class="icofont-login mr-2"></i> Authentication</a>
+               <ul>
+                  <li><a class="dropdown-item" href="signin.html">Sign In</a></li>
+                  <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                  <li><a href="verification.html">Verification</a></li>
+               </ul>
+            </li>
+            <li><a class="dropdown-item" href="listing.html">Listing</a></li>
+            <li><a class="dropdown-item" href="product_details.html">Detail</a></li>
+            <li><a class="dropdown-item" href="picks_today.html">Trending</a></li>
+            <li><a class="dropdown-item" href="recommend.html">Recommended</a></li>
+            <li><a class="dropdown-item" href="fresh_vegan.html">Most Popular</a></li>
+            <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+            <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+            <li><a class="dropdown-item" href="successful.html">Successful</a></li>
+            <li>
+               <a href="#"><i class="icofont-sub-listing mr-2"></i> My Order</a>
+               <ul>
+                  <li><a class="dropdown-item" href="my_order.html">My order</a></li>
+                  <li><a class="dropdown-item" href="status_complete.html">Status Complete</a></li>
+                  <li><a class="dropdown-item" href="status_onprocess.html">Status on Process</a></li>
+                  <li><a class="dropdown-item" href="status_canceled.html">Status Canceled</a></li>
+                  <li><a class="dropdown-item" href="review.html">Review</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#"><i class="icofont-ui-user mr-2"></i> My Account</a>
+               <ul>
+                  <li><a class="dropdown-item" href="my_account.html">My account</a></li>
+                  <li><a class="dropdown-item" href="promos.html">Promos</a></li>
+                  <li><a class="dropdown-item" href="my_address.html">My address</a></li>
+                  <li><a class="dropdown-item" href="terms_conditions.html">Terms & conditions</a></li>
+                  <li><a class="dropdown-item" href="help_support.html">Help & support</a></li>
+                  <li><a class="dropdown-item" href="help_ticket.html">Help ticket</a></li>
+                  <li><a class="dropdown-item" href="signin.html">Logout</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#"><i class="icofont-page mr-2"></i> Pages</a>
+               <ul>
+                  <li><a class="dropdown-item" href="verification.html">Verification</a></li>
+                  <li><a class="dropdown-item" href="promos.html">Promos</a></li>
+                  <li><a class="dropdown-item" href="promo_details.html">Promo Details</a></li>
+                  <li><a class="dropdown-item" href="terms_conditions.html">Terms & Conditions</a></li>
+                  <li><a class="dropdown-item" href="privacy.html">Privacy</a></li>
+                  <li><a class="dropdown-item" href="terms%26conditions.html">Conditions</a></li>
+                  <li><a class="dropdown-item" href="help_support.html">Help Support</a></li>
+                  <li><a class="dropdown-item" href="help_ticket.html">Help Ticket</a></li>
+                  <li><a class="dropdown-item" href="refund_payment.html">Refund Payment</a></li>
+                  <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                  <li><a class="dropdown-item" href="signin.html">Sign In</a></li>
+                  <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                  <li><a class="dropdown-item" href="search.html">Search</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#"><i class="icofont-link mr-2"></i> Navigation Link Example</a>
+               <ul>
+                  <li>
+                     <a href="#">Link Example 1</a>
+                     <ul>
+                        <li>
+                           <a href="#">Link Example 1.1</a>
+                           <ul>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">Link Example 1.2</a>
+                           <ul>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li><a href="#">Link Example 2</a></li>
+                  <li><a href="#">Link Example 3</a></li>
+                  <li><a href="#">Link Example 4</a></li>
+                  <li data-nav-custom-content>
+                     <div class="custom-message">
+                        You can add any custom content to your navigation items. This text is just an example.
+                     </div>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+
+         
+         <ul class="bottom-nav">
+            <li class="email">
+               <a class="text-success" href="home.html">
+                  <p class="h5 m-0"><i class="icofont-home text-success"></i></p>
+                  Home
+               </a>
+            </li>
+            <li class="github">
+               <a href="cart.html">
+                  <p class="h5 m-0"><i class="icofont-cart"></i></p>
+                  CART
+               </a>
+            </li>
+            <li class="ko-fi">
+               <a href="help_ticket.html">
+                  <p class="h5 m-0"><i class="icofont-headphone"></i></p>
+                  Help
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <?php include_once("footeruser.php")?>
+     
+      <?php include_once("bottomuser.php")?>
+   </body>
+  
+</html>
