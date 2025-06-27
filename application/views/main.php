@@ -141,7 +141,7 @@
 <script type="text/javascript" src="<?=base_url('resources/user/assets/js4')?>/modernizr.js"></script>
 
 <!--  script for google maps   -->
-<script type="text/javascript" src="<?=base_url('resources/user/assets/js4')?>/jq"></script>
+<script type="text/javascript" src="<?=base_url('resources/user/assets/js4')?>/jq.js"></script>
 
 <!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
 <script type="text/javascript" src="<?=base_url('resources/user/assets/js4')?>/gaia.js"></script>

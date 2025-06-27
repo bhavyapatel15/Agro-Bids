@@ -14,6 +14,5 @@
   <script src="<?= base_url('resources/user/assets/')?>js3/jquery.animateNumber.min.js"></script>
   <script src="<?= base_url('resources/user/assets/')?>js3/bootstrap-datepicker.js"></script>
   <script src="<?= base_url('resources/user/assets/')?>js3/scrollax.min.js"></script>
-  <script src="<?= base_url('resources/user/assets/')?>js3/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="<?= base_url('resources/user/assets/')?>js3/google-map.js"></script>
   <script src="<?= base_url('resources/user/assets/')?>js3/main.js"></script>

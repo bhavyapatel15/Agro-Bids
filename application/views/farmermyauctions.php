@@ -26,10 +26,10 @@
                      <div class="list-card bg-white h-100 rounded overflow-hidden position-relative shadow-sm">
                         <div class="list-card-image">
                            <a href="<?=site_url('Farmerauctioninfo/index/'.$a->auctionid)?>" class="text-dark">
-                              <div class="member-plan position-absolute"><span class="badge m-3 badge-danger">
+                             <!-- <div class="member-plan position-absolute"><span class="badge m-3 badge-danger">
                                   <?php
 
-                                     if($a->status==3)
+                                    if($a->status==3)
                                       {
                                           echo "Completed..!!";
                                       }
@@ -68,10 +68,10 @@
                                               {
                                                 echo $interval2->format('%a')." days to start..!!";
                                               }  
-                                        }      
+                                        }     
 
                                     ?>
-                              </span></div>
+                              </span></div>-->
                               <div class="p-3">
                                  <img src="<?=base_url('resources/admin/assets/images/'.$a->image)?>" class="img-fluid item-img w-100 mb-3">
                                  <h6 align="center"><?=$a->subcategoryname?></h6>
