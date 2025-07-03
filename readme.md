@@ -34,6 +34,7 @@ AgroBids aims to **revolutionize agricultural marketing** by eliminating middlem
 
 ![Screenshot 2025-06-27 231611](https://github.com/user-attachments/assets/189f8c78-4cc1-4924-bd2b-c2e1d94749f3)
 
+![Screenshot 2025-07-03 233806](https://github.com/user-attachments/assets/3b9025d2-ce9b-4928-b8e5-657dfdb6e8b0)
 
 ---
 ## 🛠 Tech Stack
